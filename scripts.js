@@ -36,26 +36,26 @@ function playerChoice(){
 }
 
 function playRound(playerSelection, ComputerSelection){
+    let winner = null;
     if (playerSelection === "rock"){
         switch(ComputerSelection){
             case "rock":
-                console.log("PR, CR draw game");
+                winner = "draw";
                 break;
             case "paper":
-                console.log("PR, CP computer wins!");
+                winner = "computer"
                 break;
             case "scissors":
-                console.log("PR, CS player wins!");
+                winner = "player"
         }
-
     }
     if (playerSelection === "paper"){
         switch(ComputerSelection){
             case "rock":
-                console.log("PP, CR player wins!");
+                winner = "player";
                 break;
             case "paper":
-                console.log("PP, CP draw game");
+                winner = "draw";
                 break;
             case "scissors":
                 console.log("PP, CS computer wins!");
@@ -71,5 +71,14 @@ function playRound(playerSelection, ComputerSelection){
             break;
         case "scissors":
             console.log(" PS, CS draw game");
+    }
+    console.log("Player chose " + playerSelection + " computer chose " + ComputerSelection + ".");
+    if (winner === "draw"){
+        console.log("Draw game!")
+        return winner;
+    }
+    else{
+        console.log(winner + " wins!");
+        return winner;
     }
 }
