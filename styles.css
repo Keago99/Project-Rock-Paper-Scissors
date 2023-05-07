@@ -1,0 +1,28 @@
+#navBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+#imageContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+img{
+    width: 200px;
+    height: 200px;
+    border-color: black;
+    border-style: solid;
+    padding: 30px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
