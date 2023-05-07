@@ -1,3 +1,8 @@
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
 #navBar{
     display: flex;
     justify-content: center;
@@ -20,6 +25,10 @@ img{
     border-color: black;
     border-style: solid;
     padding: 30px;
+}
+
+figcaption{
+    text-align: center;
 }
 
 footer{
