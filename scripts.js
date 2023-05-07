@@ -3,6 +3,10 @@ const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 let info = document.querySelector('#info');
 let textWinner = document.querySelector('#winner');
+let playersScore = document.querySelector('#pScore');
+let computersScore = document.querySelector('#cScore');
+let pScore = 0;
+let cScore = 0;
 
 rock.addEventListener('click', () => {playRound('rock');});
 paper.addEventListener('click', () => {playRound('paper');});
@@ -57,6 +61,21 @@ function playRound(playerChoice, computerChoice){
     }
     else{
         textWinner.innerText = (winner + " wins!");
+        if (winner == "player"){
+            pScore ++;
+            playersScore.innerText = ("Players score is: " + pScore);
+            if (pScore >= 5){
+                document.location.href = "playerWins.html";
+            }
+            
+        }
+        else if (winner == "computer"){
+            cScore++;
+            computersScore.innerText = ("Computers score is: " + cScore);
+            if (cScore >= 5){
+                document.location.href = "playerLoses.html";
+            }
+        }
     }
 
 }
