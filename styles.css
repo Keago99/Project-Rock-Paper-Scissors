@@ -2,6 +2,12 @@ body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+#higher{
+    transform:scale(1.1);
+    border-color: red;
+    box-shadow: 0, 0 10px blue;
+    margin-top: 1000px;
+}
 
 #navBar{
     display: flex;
@@ -9,6 +15,15 @@ body{
     align-items: center;
     margin-top: 20px;
     margin-bottom: 100px;
+    transition: all 0.05s;
+}
+
+#info{
+    text-align: center;
+}
+
+#winner {
+    text-align: center;
 }
 
 #imageContainer{
@@ -16,6 +31,7 @@ body{
     justify-content: space-between;
     margin-left: 100px;
     margin-right: 100px;
+    margin-bottom: 50px;
 }
 
 
